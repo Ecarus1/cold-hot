@@ -11,4 +11,11 @@ if (file_exists($vendorGit)) {
 
 use function Ecarus1\coldhot\Controller\key;
 
-key();
+if (isset($argv[1])) {
+    $key = $argv[1];
+    key($key, $argv[2]);
+} else {
+    $key = "-n";
+    $argv[2] = 0;
+    key($key, $argv[2]);
+}
