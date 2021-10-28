@@ -2,7 +2,8 @@
     "name": "ecarus1/cold-hot",
     "type": "project",
     "require": {
-        "wp-cli/php-cli-tools": "^0.11.13"
+        "wp-cli/php-cli-tools": "^0.11.13",
+		"gabordemooij/redbean": "dev-master"
     },
     "bin": [
 		"bin/cold-hot.php"
@@ -10,7 +11,8 @@
 	"autoload": {
 		"files": [
 			"src/Controller.php",
-			"src/View.php"
+			"src/View.php",
+			"src/Model.php"
 		]
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ecarus1\cold_hot\View;
+namespace Ecarus1\coldhot\View;
 
 function showGame()
 {

@@ -12,10 +12,11 @@ if (file_exists($vendorGit)) {
 use function Ecarus1\coldhot\Controller\key;
 
 if (isset($argv[1])) {
-    $key = $argv[1];
-    key($key, $argv[2]);
+    if ($argv[1] == "-r" || $argv[1] == "--replay") {
+        key($argv[1], $argv[2]);
+    } else {
+        key($argv[1], null);
+    }
 } else {
-    $key = "-n";
-    $argv[2] = 0;
-    key($key, $argv[2]);
+    key("-n", null);
 }
